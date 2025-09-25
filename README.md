@@ -67,5 +67,11 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/spark-delivery-bot.git
-cd spark-delivery-bot
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn src.server:app --reload --port 8000
+
+# open the dashboard (serve the web/ folder locally)
+cd web && python -m http.server 5500
+# visit http://localhost:5500, import your CSV, view stats, get maps links
+
