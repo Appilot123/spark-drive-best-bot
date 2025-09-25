@@ -1,0 +1,4 @@
+timestamp,zone,miles,duration_min,payout_usd,tips_usd,order_type,pickup_address,dropoff_address
+2025-09-20 14:22,North,4.2,28,9.50,5.25,batch,100 Walmart Ave,200 Pine St, City
+2025-09-20 15:10,North,3.1,22,7.00,3.00,curbside,100 Walmart Ave,55 Oak Rd, City
+2025-09-21 11:05,Central,5.4,36,10.00,6.00,curbside,100 Walmart Ave,77 Maple Dr, City
