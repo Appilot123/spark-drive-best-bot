@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Spark Driver Assistant</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 980px; margin: 2rem auto; }
+    .card { border: 1px solid #e4e4e7; border-radius: 12px; padding: 16px; margin: 12px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; border-bottom: 1px solid #eee; }
+    input, button { padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>Spark Driver Assistant (Compliant)</h1>
+
+  <div class="card">
+    <input type="file" id="csv" accept=".csv" />
+    <button id="upload">Import CSV</button>
+  </div>
+
+  <div id="stats" class="card"></div>
+
+  <div class="card">
+    <h3>Shift Advice</h3>
+    <div class="row">
+      <div>
+        <strong>Best Hours (avg $/hr)</strong>
+        <ul id="best-hours"></ul>
+      </div>
+      <div>
+        <strong>Best Weekdays (avg $/hr)</strong>
+        <ul id="best-days"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Route Helper (manual addresses)</h3>
+    <input id="pickup" placeholder="Pickup address" style="min-width:280px" />
+    <input id="dropoffs" placeholder="Dropoffs separated by |" style="min-width:380px" />
+    <button id="route">Get Google Maps Link</button>
+    <p><a id="maps" target="_blank"></a></p>
+  </div>
+
+  <div class="card">
+    <h3>Recent Deliveries</h3>
+    <table id="tbl"><thead>
+      <tr><th>Time</th><th>Zone</th><th>Type</th><th>Miles</th><th>Dur (min)</th><th>Payout</th><th>Tips</th></tr>
+    </thead><tbody></tbody></table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
